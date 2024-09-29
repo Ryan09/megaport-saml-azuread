@@ -40,7 +40,7 @@ The first step is to collect the integration URIs form the Megaport Portal.
 
 In the Megaport Portal, go to the Company menu and select Security Settings.
 
-![Megaport Security Settings](megaport-security-settings.png)
+![Megaport Security Settings](images/megaport-security-settings.png)
 
 You will need the Audience URI (Entity ID) and the IdP Response URL (Reply URL).
 
@@ -48,17 +48,17 @@ You will need the Audience URI (Entity ID) and the IdP Response URL (Reply URL).
 
 In the Entra Admin Centre, go to Manage > Enterprise applications, and click New Application.
 
-![Entra Admin Center](entra-admin-center.png)
+![Entra Admin Center](images/entra-admin-center.png)
 
 On the Browse Microsoft Entra Gallery page, choose Create your own application.
 
-![Browse Entra Gallery](browse-entra-gallery.png)
+![Browse Entra Gallery](images/browse-entra-gallery.png)
 
 Enter a name for the application (eg. Megaport Portal), and choose "Integrate any other application you don't find in the gallery (Non-gallery)", then click Create.
 
 Once the application has been created, click "Get started" on the "Set up single sign on" tile.
 
-![Set up single sign on](set-up-single-sign-on.png)
+![Set up single sign on](images/set-up-single-sign-on.png)
 
 Select SAML, then click the Edit button to the right of the Basic SAML Configuration section.
 
@@ -66,11 +66,11 @@ Enter the URIs from the Megaport Portal. The Audience URI id the "Identifier (En
 
 Save the changes using the Save button at the top of the panel.
 
-![alt text](image-4.png)
+![SAML based sign on](images/basic-saml-configuration.png)
 
 In the SAML Signing Certificate section, copy the App Federation Metadata Url. This will be required in the next step in the Megaport Portal.
 
-![alt text](image-5.png)
+![Federation Metadata Url](images/federation-metadata-url.png)
 
 ### 3. Configure SAML in Megaport Portal
 
@@ -78,7 +78,7 @@ The final step is to configure SAML in the Megaport Portal.
 
 Return to the Security Settings section, and click "Add SAML Connection".
 
-![alt text](image-6.png)
+![Add SAML Connection](images/add-saml-connection.png)
 
 Fill in the fields as detailed below.
 
@@ -87,7 +87,7 @@ Fill in the fields as detailed below.
 - **Metadata URL:** The "App Federation Metadata Url" copied from the Entra portal in the previous section.
 - **Attribute mapping:** The Megaport Portal uses email adresses as user names, so the 'email' attribute must be mapped to a field in the SAML configuration that contains the email address which matches the user name in the Megaport Portal. The SAML attributes must include the full path. For a typically Entra ID configuration the email attribute should be mapped to `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` but this can be customised if required.
 
-![alt text](image-7.png)
+![Identity Provider Information](images/identity-provider-information.png)
 
 Click Save
 
