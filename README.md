@@ -46,29 +46,29 @@ You will need the Audience URI (Entity ID) and the IdP Response URL (Reply URL).
 
 ### 2. Create Enterprise application in Entra ID
 
-In the Entra Admin Centre, go to Manage > Enterprise applications, and click New Application.
+In the Entra Admin Centre, go to Manage > Enterprise applications, and click **New Application**.
 
 ![Entra Admin Center](images/entra-admin-center.png)
 
-On the Browse Microsoft Entra Gallery page, choose Create your own application.
+On the Browse Microsoft Entra Gallery page, choose **Create your own application**.
 
 ![Browse Entra Gallery](images/browse-entra-gallery.png)
 
-Enter a name for the application (eg. Megaport Portal), and choose "Integrate any other application you don't find in the gallery (Non-gallery)", then click Create.
+Enter a name for the application (eg. Megaport Portal), and choose "Integrate any other application you don't find in the gallery (Non-gallery)", then click **Create**.
 
-Once the application has been created, click "Get started" on the "Set up single sign on" tile.
+Once the application has been created, click **Get started** on the **Set up single sign on** tile.
 
 ![Set up single sign on](images/set-up-single-sign-on.png)
 
-Select SAML, then click the Edit button to the right of the Basic SAML Configuration section.
+Select SAML, then click the **Edit** button to the right of the **Basic SAML Configuration** section.
 
 Enter the URIs from the Megaport Portal. The Audience URI id the "Identifier (Entity ID)", and the IdP Response URL is the "Reply URL (Assertion Consumer Service URL)".
 
-Save the changes using the Save button at the top of the panel.
+Complete the changes using the **Save** button at the top of the panel.
 
 ![SAML based sign on](images/basic-saml-configuration.png)
 
-In the SAML Signing Certificate section, copy the App Federation Metadata Url. This will be required in the next step in the Megaport Portal.
+In the **SAML Signing Certificate** section, copy the App **Federation Metadata Url**. This will be required in the next step in the Megaport Portal.
 
 ![Federation Metadata Url](images/federation-metadata-url.png)
 
@@ -76,7 +76,7 @@ In the SAML Signing Certificate section, copy the App Federation Metadata Url. T
 
 The final step is to configure SAML in the Megaport Portal.
 
-Return to the Security Settings section, and click "Add SAML Connection".
+Return to the Security Settings section, and click **Add SAML Connection**.
 
 ![Add SAML Connection](images/add-saml-connection.png)
 
@@ -89,9 +89,11 @@ Fill in the fields as detailed below.
 
 ![Identity Provider Information](images/identity-provider-information.png)
 
-Click Save
+Click **Save**
 
 The configuration is now complete, and attempting to log in to the Megaport Portal using an email address in the domains configured above should redirect to the Microsoft sign in workflow.
+
+In order to log in to the Megaport Portal a user must be assigned to the application in Entra ID and also have a user account created in the Megaport Portal.
 
 ## Additional Information
 
@@ -111,11 +113,11 @@ When SSO is enabled, newly invited users will receive an email with a link to ac
 
 ### Enforcing SSO
 
-The Portal can be configured to require users to log in using SSO. This allows you to prevent access to the Portal other than through your Identity Provider. This can be enabled under Company > Security Settings by setting Enforce SSO to ON.
+The Portal can be configured to require users to log in using SSO. This allows you to prevent access to the Portal other than through your Identity Provider. This can be enabled under **Company > Security Settings** by setting **Enforce SSO** to ON.
 
 Instructions for enforcing SSO are available at <https://docs.megaport.com/setting-up/enforcing-sso/?h=sso#making-sso-mandatory-for-users>
 
-Users with the Company Admin Role are always allowed to log in locally. This is to allow break glass access in the event that there is a problem with SSO.
+Users with the Company Admin Role are always allowed to log in locally, bypassing SSO. This is to allow break glass access in the event that there is a problem with SSO.
 
 ### IdP Initiated SignOn
 
