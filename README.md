@@ -38,7 +38,7 @@ There are three steps:
 
 The first step is to collect the integration URIs form the Megaport Portal.
 
-In the Megaport Portal, go to the Company menu and select Security Settings.
+In the Megaport Portal, go to the Company menu and select **Security Settings**.
 
 ![Megaport Security Settings](images/megaport-security-settings.png)
 
@@ -62,7 +62,7 @@ Once the application has been created, click **Get started** on the **Set up sin
 
 Select SAML, then click the **Edit** button to the right of the **Basic SAML Configuration** section.
 
-Enter the URIs from the Megaport Portal. The Audience URI id the "Identifier (Entity ID)", and the IdP Response URL is the "Reply URL (Assertion Consumer Service URL)".
+Enter the URIs from the Megaport Portal. The Audience URI is the "Identifier (Entity ID)", and the IdP Response URL is the "Reply URL (Assertion Consumer Service URL)".
 
 Complete the changes using the **Save** button at the top of the panel.
 
